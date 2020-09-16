@@ -1,15 +1,16 @@
 $(document).ready(function(){
     $('.slider').slick({
-        vertical: false,
         infinite: true,
+
+        dots: true,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     autoplay: false,
                 }
             },

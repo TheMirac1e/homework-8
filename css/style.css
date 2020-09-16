@@ -4,89 +4,93 @@
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  font-size: 13px;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* Элементы a сбрасываем до дефолтных стилей */
-a {
-  text-decoration: none;
-}
-
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 /*container*/
 .container {
-  max-width: 1400px;
+  max-width: 1170px;
   margin: 0 auto;
-  width: 100%
-}
-.row {
-  flex-wrap: nowrap;
 }
 .slide {
-
+  display: block;
+  position: relative;
 }
-.slick-slider {
 
+.slide-wrapper {
+  background-color: #eee;
+  height: 100vh;
+  max-height: 700px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.slick-slider_items {
 
+.slide-text {
+  padding: 40px;
+  width: 40%;
+  flex-shrink: 0;
 }
-.slick-slider_img {
 
+.slide-text h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.slide-text p {
+  font-size: 14px;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.slide-btn {
+  display: inline-block;
+  padding: 20px 45px;
+  background-color: #fb565a;
+  text-decoration: none;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.slide-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+  height: 100%;
+  width: 100%;
+}
+
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-dots li button {
+  display: inline-block;
+  margin: 0 5px;
+  border: 1px solid #FFF;
+  background-color: #fff;
+  color: #FFF;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.slick-dots li.slick-active button {
+  background-color: #fb565a;
+  color: #fb565a;
+}
+
+@media screen and (max-width: 640px) {
+  .slide-text {
+    width: 100%;
+  }
+  .slide-image {
+    display: none;
+  }
 }
