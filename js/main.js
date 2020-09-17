@@ -10,13 +10,15 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    autoplay: false,
                 }
             },
             {
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    autoplay: false,
                 }
             },
             {
@@ -25,7 +27,7 @@ $(document).ready(function () {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 2000
+                    autoplaySpeed: 3000
                 }
             },
             {
@@ -36,7 +38,7 @@ $(document).ready(function () {
                     arrows: false,
                     dots: false,
                     autoplay: true,
-                    autoplaySpeed: 2000
+                    autoplaySpeed: 3000
                 }
             }
         ]
