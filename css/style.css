@@ -606,19 +606,16 @@ select {
 /*slider*/
 .slide {
   position: relative;
-}
-.slide__wrapper {
-
+  outline: none;
 }
 .slider__card {
-
+  min-width: 1px;
 }
 .slide__text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 .slide__image {
 
@@ -664,17 +661,10 @@ select {
 .slick-dots li button:before {
   content: '';
 }
-
-.slick-dots li {
-  display: inline-block;
-}
-
 .slick-dots li button {
   display: inline-block;
   margin: 0 5px;
   border: 1px solid #FFF;
-  background-color: #fff;
-  color: #FFF;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
